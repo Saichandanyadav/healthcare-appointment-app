@@ -1,69 +1,145 @@
-# React + TypeScript + Vite
+# NiroggyanCare
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**NiroggyanCare** is a modern, responsive healthcare appointment booking platform built with **React** and **TypeScript**. It allows users to find doctors, explore hospital services, book appointments seamlessly, and view their upcoming bookings. The project features an elegant UI, animations, persistent booking data, and a fully responsive design.
 
-Currently, two official plugins are available:
+🔗 **Live Demo**: [https://healthcare-appointment-app-chandan.vercel.app/](https://healthcare-appointment-app-chandan.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+📦 **GitHub Repo**: [https://github.com/Saichandanyadav/healthcare-appointment-app](https://github.com/Saichandanyadav/healthcare-appointment-app)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* **Hero Section** – Engaging intro with animation and call-to-action.
+* **Book Appointment** – Full-width booking form with animated hospital visuals.
+* **Doctor Directory** – Searchable doctor list with profile pages and appointment booking.
+* **Hospital Services** – Overview of offered facilities and departments.
+* **Happy Patients** – Testimonials and patient success stories.
+* **Contact & Support** – Address, email, phone, and support links.
+* **Footer** – Quick navigation and social links.
+* **My Bookings** – Local storage-based persistence of user bookings.
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## 🛠 Tech Stack
+
+* **React** + **TypeScript**
+* **Tailwind CSS**
+* **Framer Motion**
+* **Radix UI**
+* **React Icons**
+
+---
+
+## 🚀 Getting Started
+
+### 📦 Prerequisites
+
+* Node.js (v18+)
+* npm or yarn
+
+### 📥 Installation
+
+```bash
+git clone https://github.com/Saichandanyadav/healthcare-appointment-app.git
+cd healthcare-appointment-app
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 🧪 Run Locally
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### 🏗 Build for Production
+
+```bash
+npm run build
+```
+
+---
+
+## 📁 Folder Structure
+
+```
+healthcare-appointment-app/
+├── public/
+│   ├── doctors/
+│   │   ├── doctor-1.jpg
+│   │   ├── ...
+│   └── hero/
+│       ├── hospital.avif
+│       └── ...
+├── src/
+│   ├── components/
+│   │   ├── BookAppointmentForm.tsx
+│   │   ├── DoctorCard.tsx
+│   │   ├── DoctorList.tsx
+│   │   ├── DoctorProfile.tsx
+│   │   ├── Footer.tsx
+│   │   └── ...
+│   ├── context/
+│   │   └── AppContext.tsx
+│   ├── data/
+│   │   └── doctors.json
+│   ├── pages/
+│   │   ├── Home.tsx
+│   │   └── DoctorDetails.tsx
+│   ├── types/
+│   │   └── doctor.ts
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
+├── tailwind.config.js
+├── postcss.config.js
+├── tsconfig.json
+├── package.json
+└── README.md
+
+```
+
+---
+
+## 📦 Packages Used
+
+### Dependencies
+
+* `@radix-ui/react-dialog`
+* `autoprefixer`
+* `clsx`
+* `framer-motion`
+* `postcss`
+* `react`
+* `react-datepicker`
+* `react-dom`
+* `react-icons`
+* `react-router-dom`
+* `tailwindcss`
+
+### Dev Dependencies
+
+* `@types/react`
+* `@types/react-dom`
+* `@types/react-router-dom`
+* `eslint`
+* `typescript`
+* `vite`
+
+---
+
+## 🤝 Contributing
+
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📄 License
+
+Licensed under the **MIT License**.
+
+---
+
+**Made with ❤️ by Sai Chandan**
