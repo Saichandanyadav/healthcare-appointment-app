@@ -1,7 +1,9 @@
 import { motion } from "framer-motion"
 import { FaHeartbeat, FaHospitalAlt, FaUserMd, FaSmile, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt, FaClock } from "react-icons/fa"
+import { useNavigate } from "react-router-dom";
 
 export default function Hero() {
+  const navigate = useNavigate();
   return (
     <div className="mb-16">
       <section id="home" className="relative flex flex-col md:flex-row items-center gap-8 md:gap-12 justify-center h-auto md:min-h-[420px] rounded-3xl overflow-hidden bg-gradient-to-br from-blue-500 via-indigo-500 to-pink-400 shadow-2xl px-8 py-10 md:py-20">
@@ -50,9 +52,12 @@ export default function Hero() {
             <p className="text-gray-600 mb-6 max-w-lg">
               Your health journey starts here. We ensure every step is convenient and stress-free.
             </p>
-            <a href="/doctors" className="mx-auto md:mx-0 inline-block px-8 py-4 bg-gradient-to-r from-pink-500 to-blue-500 text-white font-bold rounded-full shadow-lg text-lg hover:scale-105 active:scale-95 transition">
+            <button
+              onClick={() => navigate("/doctors")}
+              className="mx-auto md:mx-0 inline-block px-8 py-4 bg-gradient-to-r from-pink-500 to-blue-500 text-white font-bold rounded-full shadow-lg text-lg hover:scale-105 active:scale-95 transition"
+            >
               Book a Doctor
-            </a>
+            </button>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 60, scale: 0.8 }}
