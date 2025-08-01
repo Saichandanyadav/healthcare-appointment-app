@@ -2,7 +2,7 @@
 
 **NiroggyanCare** is a modern, responsive healthcare appointment booking platform built with **React** and **TypeScript**. It allows users to find doctors, explore hospital services, book appointments seamlessly, and view their upcoming bookings. The project features an elegant UI, animations, persistent booking data, and a fully responsive design.
 
-🔗 **Live Demo**: [https://healthcare-appointment-app.vercel.app](https://healthcare-appointment-app.vercel.app)
+🔗 **Live Demo**: [https://healthcare-appointment-app-chandan.vercel.app/](https://healthcare-appointment-app-chandan.vercel.app/)
 
 📦 **GitHub Repo**: [https://github.com/Saichandanyadav/healthcare-appointment-app](https://github.com/Saichandanyadav/healthcare-appointment-app)
 
@@ -44,16 +44,12 @@
 git clone https://github.com/Saichandanyadav/healthcare-appointment-app.git
 cd healthcare-appointment-app
 npm install
-# or
-yarn install
 ```
 
 ### 🧪 Run Locally
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.
@@ -62,8 +58,6 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ```bash
 npm run build
-# or
-yarn build
 ```
 
 ---
@@ -104,6 +98,7 @@ healthcare-appointment-app/
 ├── tsconfig.json
 ├── package.json
 └── README.md
+
 ```
 
 ---
@@ -126,38 +121,24 @@ healthcare-appointment-app/
 
 ### Dev Dependencies
 
-* `@eslint/js`
 * `@types/react`
 * `@types/react-dom`
 * `@types/react-router-dom`
-* `@vitejs/plugin-react`
 * `eslint`
-* `eslint-plugin-react-hooks`
-* `eslint-plugin-react-refresh`
-* `globals`
 * `typescript`
-* `typescript-eslint`
 * `vite`
-
----
-
-## 🛠 Customization
-
-* Replace doctor images in `public/doctors/`
-* Update doctor details in `src/data/doctors.json`
-* Tweak Tailwind CSS classes to match your brand
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests are welcome! For major changes, please open an issue first.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ---
 
 ## 📄 License
 
-This project is licensed under the **MIT License**.
+Licensed under the **MIT License**.
 
 ---
 
