@@ -32,6 +32,96 @@ export default function Hero() {
         </motion.div>
       </section>
 
+        <section id="services" className="mt-16">
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl font-bold text-blue-700">Our Hospital Services</h2>
+            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Discover a wide range of healthcare services designed to meet every need. From diagnostics to advanced surgeries, our facilities are equipped with the latest technology and expert care teams.</p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+              <FaUserMd className="text-4xl text-blue-500 mb-3" />
+              <h3 className="text-xl font-bold mb-2 text-blue-700">Expert Doctors</h3>
+              <p className="text-gray-600 mb-3">Choose from a curated list of leading specialists in every field.</p>
+              <img src="/hero/services.avif" alt="Services" className="w-40 h-24 object-cover rounded shadow" />
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+              <FaHospitalAlt className="text-4xl text-pink-500 mb-3" />
+              <h3 className="text-xl font-bold mb-2 text-pink-700">World-Class Facilities</h3>
+              <p className="text-gray-600 mb-3">Hospitals equipped with advanced technology and exceptional care.</p>
+              <img src="/hero/facility.avif" alt="Facility" className="w-40 h-24 object-cover rounded shadow" />
+            </div>
+            <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
+              <FaSmile className="text-4xl text-green-500 mb-3" />
+              <h3 className="text-xl font-bold mb-2 text-green-700">Comprehensive Support</h3>
+              <p className="text-gray-600 mb-3">We offer support at every step, from consultation to recovery. Your health is our mission.</p>
+              <img src="/hero/patient.avif" alt="Happy Patients" className="w-40 h-24 object-cover rounded shadow" />
+            </div>
+          </div>
+        </section>
+
+      <section id="how-it-works" className="mt-16">
+        <div className="mb-8 text-center">
+          <h2 className="text-3xl font-bold text-blue-700">How It Works</h2>
+          <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
+            NiroggyanCare is an aggregator that connects patients with doctors and hospitals. We do not provide treatment but make accessing quality care fast, transparent, and hassle-free.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+            <img src="/hero/search-doctor.jpg" alt="Search Doctor" className="w-20 h-20 mx-auto mb-4" />
+            <h3 className="text-xl font-bold text-blue-600 mb-2">Search Doctors</h3>
+            <p className="text-gray-600">Find verified specialists across top hospitals using filters and reviews.</p>
+          </div>
+          <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+            <img src="/hero/book-slot.jpg" alt="Book Slot" className="w-20 h-20 mx-auto mb-4" />
+            <h3 className="text-xl font-bold text-pink-600 mb-2">Book Instantly</h3>
+            <p className="text-gray-600">Choose your preferred date and time. No long waiting queues or confusion.</p>
+          </div>
+          <div className="bg-white rounded-2xl shadow-lg p-8 text-center">
+            <img src="/hero/consultation.jpg" alt="Consultation" className="w-20 h-20 mx-auto mb-4" />
+            <h3 className="text-xl font-bold text-green-600 mb-2">Get Consultation</h3>
+            <p className="text-gray-600">Visit your doctor at the scheduled time. We ensure smooth follow-ups too.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-choose" className="mt-16">
+        <div className="mb-8 text-center">
+          <h2 className="text-3xl font-bold text-indigo-700">Why Choose NiroggyanCare?</h2>
+          <p className="text-gray-600 mt-2 max-w-2xl mx-auto">We simplify your healthcare journey. Here's why thousands trust us.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-8">
+          <div className="bg-white rounded-2xl shadow-md p-6 flex items-center gap-4">
+            <FaUserMd className="text-4xl text-blue-500" />
+            <div>
+              <h4 className="text-xl font-semibold text-blue-700">Verified Doctors Only</h4>
+              <p className="text-gray-600 text-sm">We partner with certified professionals from reputed hospitals.</p>
+            </div>
+          </div>
+          <div className="bg-white rounded-2xl shadow-md p-6 flex items-center gap-4">
+            <FaHospitalAlt className="text-4xl text-pink-500" />
+            <div>
+              <h4 className="text-xl font-semibold text-pink-700">Pan-India Access</h4>
+              <p className="text-gray-600 text-sm">Consult top doctors across India — wherever you are.</p>
+            </div>
+          </div>
+          <div className="bg-white rounded-2xl shadow-md p-6 flex items-center gap-4">
+            <FaClock className="text-4xl text-indigo-500" />
+            <div>
+              <h4 className="text-xl font-semibold text-indigo-700">24x7 Booking</h4>
+              <p className="text-gray-600 text-sm">Book appointments anytime — even on Sundays and holidays.</p>
+            </div>
+          </div>
+          <div className="bg-white rounded-2xl shadow-md p-6 flex items-center gap-4">
+            <FaSmile className="text-4xl text-green-500" />
+            <div>
+              <h4 className="text-xl font-semibold text-green-700">Happy Patients</h4>
+              <p className="text-gray-600 text-sm">Thousands of success stories and trusted user experiences.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="book-appointment" className="mt-16 flex flex-col items-center justify-center">
         <div className="w-full bg-gradient-to-r from-blue-50 to-pink-50 shadow-xl rounded-2xl p-10 md:p-16 flex flex-col md:flex-row items-center justify-between gap-10">
           <motion.div
@@ -86,32 +176,52 @@ export default function Hero() {
         </div>
       </section>
 
-      <section id="services" className="mt-16">
+            <section id="partners" className="mt-16">
         <div className="mb-8 text-center">
-          <h2 className="text-3xl font-bold text-blue-700">Our Hospital Services</h2>
-          <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Discover a wide range of healthcare services designed to meet every need. From diagnostics to advanced surgeries, our facilities are equipped with the latest technology and expert care teams.</p>
+          <h2 className="text-3xl font-bold text-blue-700">Our Partner Hospitals</h2>
+          <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
+            We collaborate with top-rated hospitals to ensure quality treatment and patient safety. You're in trusted hands.
+          </p>
         </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-            <FaUserMd className="text-4xl text-blue-500 mb-3" />
-            <h3 className="text-xl font-bold mb-2 text-blue-700">Expert Doctors</h3>
-            <p className="text-gray-600 mb-3">Choose from a curated list of leading specialists in every field.</p>
-            <img src="/hero/services.avif" alt="Services" className="w-40 h-24 object-cover rounded shadow" />
-          </div>
-          <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-            <FaHospitalAlt className="text-4xl text-pink-500 mb-3" />
-            <h3 className="text-xl font-bold mb-2 text-pink-700">World-Class Facilities</h3>
-            <p className="text-gray-600 mb-3">Hospitals equipped with advanced technology and exceptional care.</p>
-            <img src="/hero/facility.avif" alt="Facility" className="w-40 h-24 object-cover rounded shadow" />
-          </div>
-          <div className="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center">
-            <FaSmile className="text-4xl text-green-500 mb-3" />
-            <h3 className="text-xl font-bold mb-2 text-green-700">Comprehensive Support</h3>
-            <p className="text-gray-600 mb-3">We offer support at every step, from consultation to recovery. Your health is our mission.</p>
-            <img src="/hero/patient.avif" alt="Happy Patients" className="w-40 h-24 object-cover rounded shadow" />
-          </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 items-center justify-center">
+          <img src="/hero/hospital1.jpg" alt="Hospital 1" className="w-full object-contain h-20 grayscale hover:grayscale-0 transition" />
+          <img src="/hero/hospital2.jpg" alt="Hospital 2" className="w-full object-contain h-20 grayscale hover:grayscale-0 transition" />
+          <img src="/hero/hospital3.jpg" alt="Hospital 3" className="w-full object-contain h-20 grayscale hover:grayscale-0 transition" />
+          <img src="/hero/hospital4.jpg" alt="Hospital 4" className="w-full object-contain h-20 grayscale hover:grayscale-0 transition" />
         </div>
       </section>
+
+      <section id="resources" className="mt-16">
+      <div className="mb-8 text-center">
+        <h2 className="text-3xl font-bold text-indigo-700">Health Resources & Tips</h2>
+        <p className="text-gray-600 mt-2 max-w-2xl mx-auto">
+          Stay informed and healthy with doctor-approved resources. Because good health begins with knowledge.
+        </p>
+      </div>
+      <div className="grid md:grid-cols-3 gap-8">
+        <div className="bg-white rounded-2xl p-6 shadow-lg flex flex-col">
+          <div className="w-full h-44 overflow-hidden rounded-lg mb-4">
+            <img src="/hero/health-tip1.jpeg" alt="Health Tip 1" className="w-full h-full object-cover" />
+          </div>
+          <h4 className="text-lg font-bold text-blue-700 mb-2">Top 5 Ways to Boost Immunity</h4>
+          <p className="text-gray-600 text-sm">Simple changes to strengthen your immune system naturally. Learn how small habits make a big difference.</p>
+        </div>
+        <div className="bg-white rounded-2xl p-6 shadow-lg flex flex-col">
+          <div className="w-full h-44 overflow-hidden rounded-lg mb-4">
+            <img src="/hero/health-tip2.jpg" alt="Health Tip 2" className="w-full h-full object-cover" />
+          </div>
+          <h4 className="text-lg font-bold text-pink-700 mb-2">Managing Stress in Daily Life</h4>
+          <p className="text-gray-600 text-sm">Mental health is just as important. Discover calming techniques for busy lifestyles.</p>
+        </div>
+        <div className="bg-white rounded-2xl p-6 shadow-lg flex flex-col">
+          <div className="w-full h-44 overflow-hidden rounded-lg mb-4">
+            <img src="/hero/health-tip3.webp" alt="Health Tip 3" className="w-full h-full object-cover" />
+          </div>
+          <h4 className="text-lg font-bold text-green-700 mb-2">Preventive Health Checkups</h4>
+          <p className="text-gray-600 text-sm">Early detection saves lives. Learn why routine checkups are essential even when you're feeling fine.</p>
+        </div>
+      </div>
+    </section>
 
       <section id="patients" className="mt-16">
         <div className="mb-8 text-center">
