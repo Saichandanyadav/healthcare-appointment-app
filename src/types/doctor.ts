@@ -16,3 +16,4 @@ export type Booking = {
   patientEmail: string
   slot: string
 }
+
