@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Raj Malhotra",
+    "specialization": "Cardiologist",
+    "experience": "Over 15 years of experience in diagnosing and treating heart conditions.",
+    "profileImage": "/doctors/doctor-1.jpg",
+    "availability": ["Monday", "Tuesday", "Friday", "Saturday"]
+  },
+  {
+    "id": 2,
+    "name": "Dr. Aisha Khan",
+    "specialization": "Dermatologist",
+    "experience": "10 years specializing in skincare and treating chronic skin disorders.",
+    "profileImage": "/doctors/doctor-2.jpeg",
+    "availability": ["Tuesday", "Thursday", "Saturday"]
+  },
+  {
+    "id": 3,
+    "name": "Dr. Arjun Mehta",
+    "specialization": "Orthopedic",
+    "experience": "12 years treating bone fractures, arthritis, and sports injuries.",
+    "profileImage": "/doctors/doctor-3.jpg",
+    "availability": ["Monday", "Wednesday"]
+  },
+  {
+    "id": 4,
+    "name": "Dr. Priya Sharma",
+    "specialization": "Pediatrician",
+    "experience": "8 years of experience in child and adolescent healthcare.",
+    "profileImage": "/doctors/doctor-4.jpeg",
+    "availability": ["Tuesday", "Wednesday", "Friday"]
+  },
+  {
+    "id": 5,
+    "name": "Dr. Karan Kapoor",
+    "specialization": "Neurologist",
+    "experience": "Over 14 years of experience in treating brain and spinal disorders.",
+    "profileImage": "/doctors/doctor-5.jpg",
+    "availability": ["Monday", "Thursday", "Saturday"]
+  },
+  {
+    "id": 6,
+    "name": "Dr. Meera Joshi",
+    "specialization": "Gynecologist",
+    "experience": "16 years in women's reproductive health and prenatal care.",
+    "profileImage": "/doctors/doctor-6.jpg",
+    "availability": ["Wednesday", "Saturday", "Sunday"]
+  },
+  {
+    "id": 7,
+    "name": "Dr. Nisha Patel",
+    "specialization": "Endocrinologist",
+    "experience": "11 years managing hormonal imbalances and thyroid conditions.",
+    "profileImage": "/doctors/doctor-7.webp",
+    "availability": ["Monday", "Thursday"]
+  },
+  {
+    "id": 8,
+    "name": "Dr. Rohan Verma",
+    "specialization": "ENT Specialist",
+    "experience": "9 years treating ear, nose, and throat disorders.",
+    "profileImage": "/doctors/doctor-8.webp",
+    "availability": ["Tuesday", "Friday"]
+  }
+]
