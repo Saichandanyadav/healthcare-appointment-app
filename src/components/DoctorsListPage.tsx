@@ -56,18 +56,21 @@ export default function DoctorsListPage() {
 
   return (
     <main className="container mx-auto px-4 py-10 min-h-[80vh]">
-      <div className="flex flex-col sm:flex-row items-center justify-between mb-8 gap-4">
-        <button onClick={() => nav("/")} className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-400 to-pink-400 text-white rounded-full shadow hover:scale-105 transition">
+      <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between mb-8">
+        <button
+          onClick={() => nav("/")}
+          className="flex items-center gap-2 px-4 py-2 w-full sm:w-fit bg-gradient-to-r from-blue-400 to-pink-400 text-white rounded-full shadow hover:scale-105 transition"
+        >
           <FaArrowLeft /> Back to Home
         </button>
-        <div className="flex gap-2 w-full max-w-xl justify-end">
+        <div className="flex flex-col sm:flex-row gap-2 w-full sm:w-fit sm:items-center">
           <button
             onClick={() => setShowBookings(v => !v)}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-100 text-blue-700 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition"
+            className="flex items-center justify-center gap-2 px-4 py-2 w-full sm:w-fit bg-blue-100 text-blue-700 rounded-full font-semibold hover:bg-blue-600 hover:text-white transition"
           >
             <FaCalendarCheck /> {showBookings ? "Hide My Bookings" : "Show My Bookings"}
           </button>
-          <div className="relative w-full max-w-xs">
+          <div className="relative w-full sm:w-72">
             <input
               type="text"
               placeholder="Search doctor or specialty..."
@@ -76,11 +79,14 @@ export default function DoctorsListPage() {
               onChange={e => setSearch(e.target.value)}
             />
             <span className="absolute left-3 top-1/2 -translate-y-1/2 text-blue-400">
-              <svg viewBox="0 0 24 24" width={18} height={18} fill="currentColor"><path d="M10 2a8 8 0 105.293 14.293l4.354 4.354a1 1 0 001.414-1.414l-4.354-4.354A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"></path></svg>
+              <svg viewBox="0 0 24 24" width={18} height={18} fill="currentColor">
+                <path d="M10 2a8 8 0 105.293 14.293l4.354 4.354a1 1 0 001.414-1.414l-4.354-4.354A8 8 0 0010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"></path>
+              </svg>
             </span>
           </div>
         </div>
       </div>
+
       {showBookings ? (
         <ShowMyBookings
           bookings={bookings}

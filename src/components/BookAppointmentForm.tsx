@@ -70,36 +70,46 @@ export default function BookAppointmentForm({
 
   if (confirmation)
     return (
-      <motion.div className="text-center" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+      <motion.div
+        className="text-center px-4 sm:px-6"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+      >
         <FaCheckCircle className="text-green-500 text-5xl mx-auto mb-4" />
-        <p className="text-lg font-semibold mb-4">{confirmation}</p>
-        <button onClick={onClose} className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-2 font-bold">
+        <p className="text-base sm:text-lg font-semibold mb-4">{confirmation}</p>
+        <button
+          onClick={onClose}
+          className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-2 font-bold text-sm sm:text-base"
+        >
           Close
         </button>
       </motion.div>
     )
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-      <h3 className="text-xl font-bold mb-2">Book Appointment</h3>
+    <form onSubmit={handleSubmit} className="flex flex-col gap-4 px-4 sm:px-6">
+      <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 text-center sm:text-left">Book Appointment</h3>
+
       <div>
         <input
           value={name}
           onChange={e => setName(e.target.value)}
           placeholder="Your Name"
-          className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full border border-gray-200 rounded px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
         {errors.name && <span className="text-red-600 text-xs">{errors.name}</span>}
       </div>
+
       <div>
         <input
           value={email}
           onChange={e => setEmail(e.target.value)}
           placeholder="Your Email"
-          className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full border border-gray-200 rounded px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
         {errors.email && <span className="text-red-600 text-xs">{errors.email}</span>}
       </div>
+
       <div>
         <DatePicker
           selected={selectedDate}
@@ -107,13 +117,14 @@ export default function BookAppointmentForm({
           filterDate={isDayAllowed}
           minDate={new Date()}
           placeholderText="Select an available date"
-          className="w-full border border-gray-200 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full border border-gray-200 rounded px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-400"
         />
         {errors.date && <span className="text-red-600 text-xs">{errors.date}</span>}
       </div>
+
       <button
         type="submit"
-        className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-2 font-bold mt-2"
+        className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-2 font-bold text-sm sm:text-base mt-2"
       >
         Confirm Booking
       </button>
