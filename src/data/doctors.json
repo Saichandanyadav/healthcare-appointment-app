@@ -62,5 +62,21 @@
     "experience": "9 years treating ear, nose, and throat disorders.",
     "profileImage": "/doctors/doctor-8.webp",
     "availability": ["Tuesday", "Friday"]
+  },
+  {
+    "id": 9,
+    "name": "Dr. Manasa Yadav",
+    "specialization": "Psychiatrist",
+    "experience": "10 years treating mental health disorders including anxiety, depression, and PTSD",
+    "profileImage": "/doctors/doctor-9.avif",
+    "availability": ["Monday", "Wednesday", "Friday"]
+  },
+  {
+    "id": 10,
+    "name": "Dr. Nithin Reddy",
+    "specialization": "Oncologist",
+    "experience": "7 years specializing in cancer diagnosis, treatment planning, and chemotherapy care.",
+    "profileImage": "/doctors/doctor-10.webp",
+    "availability": ["Tuesday", "Thursday", "Saturday"]
   }
 ]

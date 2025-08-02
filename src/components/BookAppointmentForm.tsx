@@ -31,6 +31,8 @@ export default function BookAppointmentForm({
   }
 
   const allowedDays = doctor.availability.map(day => weekdayMap[day])
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
 
   function validate() {
     const e: typeof errors = {}
@@ -65,7 +67,7 @@ export default function BookAppointmentForm({
   }
 
   function isDayAllowed(date: Date) {
-    return allowedDays.includes(date.getDay())
+    return date >= today && allowedDays.includes(date.getDay())
   }
 
   if (confirmation)
@@ -74,6 +76,8 @@ export default function BookAppointmentForm({
         className="text-center px-4 sm:px-6"
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
+        exit={{ opacity: 0, y: 20 }}
+        transition={{ duration: 0.3 }}
       >
         <FaCheckCircle className="text-green-500 text-5xl mx-auto mb-4" />
         <p className="text-base sm:text-lg font-semibold mb-4">{confirmation}</p>
@@ -87,47 +91,51 @@ export default function BookAppointmentForm({
     )
 
   return (
-    <form onSubmit={handleSubmit} className="flex flex-col gap-4 px-4 sm:px-6">
-      <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 text-center sm:text-left">Book Appointment</h3>
+    <div
+      className="bg-white rounded-lg shadow-xl p-4 sm:p-6 w-full max-w-md mx-auto"
+    >
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+        <h3 className="text-lg sm:text-xl font-bold mb-1 sm:mb-2 text-center sm:text-left">Book Appointment</h3>
 
-      <div>
-        <input
-          value={name}
-          onChange={e => setName(e.target.value)}
-          placeholder="Your Name"
-          className="w-full border border-gray-200 rounded px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
-        {errors.name && <span className="text-red-600 text-xs">{errors.name}</span>}
-      </div>
+        <div>
+          <input
+            value={name}
+            onChange={e => setName(e.target.value)}
+            placeholder="Your Name"
+            className="w-full border border-gray-200 rounded px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          {errors.name && <span className="text-red-600 text-xs">{errors.name}</span>}
+        </div>
 
-      <div>
-        <input
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          placeholder="Your Email"
-          className="w-full border border-gray-200 rounded px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
-        {errors.email && <span className="text-red-600 text-xs">{errors.email}</span>}
-      </div>
+        <div>
+          <input
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            placeholder="Your Email"
+            className="w-full border border-gray-200 rounded px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          {errors.email && <span className="text-red-600 text-xs">{errors.email}</span>}
+        </div>
 
-      <div>
-        <DatePicker
-          selected={selectedDate}
-          onChange={date => setSelectedDate(date)}
-          filterDate={isDayAllowed}
-          minDate={new Date()}
-          placeholderText="Select an available date"
-          className="w-full border border-gray-200 rounded px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-400"
-        />
-        {errors.date && <span className="text-red-600 text-xs">{errors.date}</span>}
-      </div>
+        <div>
+          <DatePicker
+            selected={selectedDate}
+            onChange={date => setSelectedDate(date)}
+            filterDate={isDayAllowed}
+            minDate={today}
+            placeholderText="Select an available date"
+            className="w-full border border-gray-200 rounded px-3 py-2 text-sm sm:text-base focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+          {errors.date && <span className="text-red-600 text-xs">{errors.date}</span>}
+        </div>
 
-      <button
-        type="submit"
-        className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-2 font-bold text-sm sm:text-base mt-2"
-      >
-        Confirm Booking
-      </button>
-    </form>
+        <button
+          type="submit"
+          className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-6 py-2 font-bold text-sm sm:text-base mt-2"
+        >
+          Confirm Booking
+        </button>
+      </form>
+    </div>
   )
 }
